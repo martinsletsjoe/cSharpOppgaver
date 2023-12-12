@@ -2,9 +2,9 @@
 
 public class Reservation
 {
-    public string Surname { get; set;  }
-    public string ContactInfo { get; set; }
-    public int NumberOfPeople { get; set; }
+    private string Surname { get; set; }
+    private string ContactInfo { get; set; }
+    private int NumberOfPeople { get; set; }
     public DateTime ReservationTime { get; set; }
 
     public Reservation(string surname, string contactInfo, int numberOfPeople, DateTime reservationTime)
@@ -16,15 +16,27 @@ public class Reservation
     }
 
 
-    public string GetDescription()
+    public Reservation GetDescription()
     {
-        var dateOfArrival = ReservationTime.ToString("dd.MM.yyyy");
-        var hourOfArrival = ReservationTime.ToString("HH:mm");
-        return $"Reservert bord til {NumberOfPeople} personer {dateOfArrival} kl.{hourOfArrival}";
+
+        
+            var dateOfArrival = ReservationTime.ToString("dd.MM.yyyy");
+            var hourOfArrival = ReservationTime.ToString("HH:mm");
+            return $"Reservert bord til {NumberOfPeople} personer {dateOfArrival} kl.{hourOfArrival}";
+        
+        
+
+        return null;
     }
 
-    public object GetReservation()
+    public Restaurant GetReservation()
     {
-        return GetDescription();
+        foreach (var VARIABLE in Reservation)
+        {
+            //Restaurant.Reservations;
+
+            return Restaurant;
+
+        }
     }
 }

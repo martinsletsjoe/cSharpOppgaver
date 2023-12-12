@@ -13,7 +13,6 @@ public class Restaurant
         Name = name;
         Opening = opening;
         Closing = closing;
-        Tables = new List<Table>();
     }
     public Table AddTable(string name, int capacity)
     {
@@ -24,9 +23,15 @@ public class Restaurant
     }
 
 
-    public Reservation CreateReservation(string surname, string contactInfo, int people, DateTime reservationTime)
+    public Reservation CreateReservation(string surname, string contactInfo, int people, DateTime timeOfDay)
     {
-        return new Reservation(surname, contactInfo, people, reservationTime);
+        var newcustomer = new Reservation(surname, contactInfo, people, timeOfDay);
+        foreach (var reservation in Reservations)
+        {
+            if (reservation.ReservationTime == timeOfDay) return null;
+            Reservations.Add(newcustomer);
+        }
+        return newcustomer;
 
     }
 }
