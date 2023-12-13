@@ -8,6 +8,7 @@ public class Restaurant
     public List<Table> Tables;
     public List<Reservation> Reservations;
 
+
     public Restaurant(string name, int opening, int closing)
     {
         Name = name;

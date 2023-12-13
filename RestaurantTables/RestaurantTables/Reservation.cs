@@ -7,6 +7,7 @@ public class Reservation
     private int NumberOfPeople { get; set; }
     public DateTime ReservationTime { get; set; }
 
+
     public Reservation(string surname, string contactInfo, int numberOfPeople, DateTime reservationTime)
     {
         Surname = surname;
