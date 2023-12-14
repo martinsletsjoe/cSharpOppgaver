@@ -2,42 +2,45 @@
 
 public class Reservation
 {
-    private string Surname { get; set; }
-    private string ContactInfo { get; set; }
-    private int NumberOfPeople { get; set; }
-    public DateTime ReservationTime { get; set; }
+    private string Name { get; set; }
+    private string Phone { get; set; }
+    private int PartySize { get; set; }
+    public DateTime DateTime { get; set; }
+    public bool Occupied { get; set; }
 
 
-    public Reservation(string surname, string contactInfo, int numberOfPeople, DateTime reservationTime)
+
+    public Reservation(string name, string phone, int partySize, DateTime dateTime)
     {
-        Surname = surname;
-        ContactInfo = contactInfo;
-        ReservationTime = reservationTime;
-        NumberOfPeople = numberOfPeople;
+        Name = name;
+        Phone = phone;
+        DateTime = dateTime;
+        PartySize = partySize;
     }
 
 
-    public Reservation GetDescription()
-    {
+    //public Reservation GetDescription()
+    //{
 
-        
-            var dateOfArrival = ReservationTime.ToString("dd.MM.yyyy");
-            var hourOfArrival = ReservationTime.ToString("HH:mm");
-            return $"Reservert bord til {NumberOfPeople} personer {dateOfArrival} kl.{hourOfArrival}";
-        
-        
 
-        return null;
-    }
+    //        var dateOfArrival = DateTime.ToString("dd.MM.yyyy");
+    //        var hourOfArrival = DateTime.ToString("HH:mm");
+    //        return $"Reservert bord til {PartySize} personer {dateOfArrival} kl.{hourOfArrival}";
 
-    public Restaurant GetReservation()
-    {
-        foreach (var VARIABLE in Reservation)
-        {
-            //Restaurant.Reservations;
 
-            return Restaurant;
 
-        }
-    }
+    //    return null;
+    //}
+
+    //public Restaurant GetReservation()
+    //{
+    //    foreach (var VARIABLE in Reservation)
+    //    {
+    //        //Restaurant.Reservations;
+
+    //        return Restaurant;
+
+    //    }
+    //}
+
 }

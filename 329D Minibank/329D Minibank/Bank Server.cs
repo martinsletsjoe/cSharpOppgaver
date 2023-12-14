@@ -2,25 +2,17 @@
 
 public class BankServer
 {
-    private List<BankAccount> _people = new List<BankAccount>()
+    List<BankAccount> _bankAccounts;
+
+    public BankServer()
     {
-        new BankAccount(1,1001),
-        new BankAccount(2,1002),
-        new BankAccount(3,1003),
-        new BankAccount(4,1000),
-        new BankAccount(5,1000),
-    };
+        _bankAccounts = new List<BankAccount>();
+    }
 
-
-
-    public int? GetPerson(int id)
+    public BankAccount AddAccount(string name, int money)
     {
-        foreach (var person in _people)
-        {
-            if (id != person.GetId())continue;
-            return person.Money;
-        }
-
-        return null;
+        var account = new BankAccount(name, money);
+        _bankAccounts.Add(account);
+        return account;
     }
 }

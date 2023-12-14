@@ -2,17 +2,12 @@
 
 public class BankAccount
 {
-    private int Id { get; }
-    public int Money { get; }
+    public string Name { get; set; }
+    public int Money { get; set; }
 
-    public BankAccount(int id, int money)
+    public BankAccount(string name, int money)
     {
-        Id = id;
+        Name = name;
         Money = money;
-    }
-
-    public int GetId()
-    {
-        return Id;
     }
 }

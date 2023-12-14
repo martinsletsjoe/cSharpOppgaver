@@ -6,10 +6,8 @@
         {
             var bankServer = new BankServer();
 
-            Console.WriteLine(
-            bankServer.GetPerson(1));
-
-            //Console.WriteLine(person.GetId());
+            var megmartin = bankServer.AddAccount("martin", 10);
+            Console.WriteLine(megmartin.Name + megmartin.Money);
         }
     }
 }

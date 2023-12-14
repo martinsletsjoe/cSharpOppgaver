@@ -9,7 +9,7 @@ public class Vacation
     public DateTime ReturnDate { get; }
     public int PartySize { get; }
     public int Cost { get; }
-    List<Booking> _bookings { get; }
+    private List<Booking> Bookings { get; }
 
     public Vacation(string name, DateTime departureDate, 
         DateTime returnDate, int partySize, int cost)
@@ -19,20 +19,13 @@ public class Vacation
         ReturnDate = returnDate;
         PartySize = partySize;
         Cost = cost;
-        _bookings = new List<Booking>();
-    }
-
-
-
-    public string GetDescription()
-    {
-        return Name;
+        Bookings = new List<Booking>();
     }
 
     public Booking Book(string name, int size)
     {
         var booking = new Booking(name, size);
-        _bookings.Add(booking);
+        Bookings.Add(booking);
         return booking;
     }
 
@@ -41,7 +34,7 @@ public class Vacation
         var text = new StringBuilder();
         var dateFormatting = "dd.MM.yyyy";
         text.AppendLine($"{Name} - fra {DepartureDate:D} til {ReturnDate:D} - {PartySize} plasser");
-        foreach (var booking in _bookings)
+        foreach (var booking in Bookings)
         {
             var traveltext = booking.GetAsText();
             text.Append(traveltext);

@@ -14,7 +14,7 @@
             var reservationResponse1 = restaurant.CreateReservation("Olsen", "998 87 766", 5, dateTime);
             Console.WriteLine(reservationResponse1.GetDescription());
             //Reservert bord til 5 personer 24.12.2023 kl. 17:00
-            var reservation1 = reservationResponse1.GetReservation();
+            //var reservation1 = reservationResponse1.GetReservation();
             //Console.WriteLine(reservation1.GetDescription());
             //// Reservert bord til 5 personer 24.12.2023 kl. 17:00
             //var reservationResponse2 = restaurant.CreateReservation("Hansen", "997 78 866", 5, dateTime);
