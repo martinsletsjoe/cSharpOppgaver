@@ -12,9 +12,9 @@ public class BankServer
         _bankAccounts = new List<BankAccount>();
     }
 
-    public BankAccount AddAccount(string name, int money, int Id)
+    public BankAccount AddAccount(string name, int money, int Id, int pin)
     {
-        var account = new BankAccount(name, money, Id);
+        var account = new BankAccount(name, money, Id, pin);
         _bankAccounts.Add(account);
         return account;
     }
@@ -36,5 +36,10 @@ public class BankServer
         }
 
         return text.ToString();
+    }
+
+    public object PinIsReal(int pin)
+    {
+        throw new NotImplementedException();
     }
 }

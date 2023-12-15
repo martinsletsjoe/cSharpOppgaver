@@ -4,25 +4,25 @@
     {
         static void Main(string[] args)
         {
-            var bankServer = new BankServer();
+            var minibank = new Minibank();
 
-            var megmartin = bankServer.AddAccount("Martin", 10, 1);
-            var megLars = bankServer.AddAccount("Lars", 112, 2);
-            var megSimen = bankServer.AddAccount("Simen", 11, 3);
+            var insertCard = minibank.VerifyId(1111234567);
 
-            Console.WriteLine("Write your PIN");
-            var UserInput = Console.ReadLine();
-            var UserInputToInt = Int32.Parse(UserInput);
-
-
-            var UserAccount = bankServer.GetAccount(UserInputToInt);
-            UserAccount.AddFunds(200);
-            Console.WriteLine(UserAccount.Money);
-
-
-            var text = bankServer.GetAllAccounts();
-            Console.WriteLine(text);
+            //var enterPin = minibank.CheckPin("0123");
 
         }
     }
 }
+
+//Console.WriteLine("Write your PIN");
+//var UserInput = Console.ReadLine();
+//var UserInputToInt = Int32.Parse(UserInput);
+
+
+//var UserAccount = bankServer.GetAccount(UserInputToInt);
+//UserAccount.AddFunds(200);
+//Console.WriteLine(UserAccount.Money);
+
+
+//var text = bankServer.GetAllAccounts();
+////Console.WriteLine(text);
