@@ -12,7 +12,7 @@
             //// Bord A har plass til 6 personer
             var dateTime = new DateTime(2023, 12, 24, 17, 0, 0);
             var reservationResponse1 = restaurant.CreateReservation("Olsen", "998 87 766", 5, dateTime);
-            Console.WriteLine(reservationResponse1.GetDescription());
+            //Console.WriteLine(reservationResponse1.GetDescription());
             //Reservert bord til 5 personer 24.12.2023 kl. 17:00
             //var reservation1 = reservationResponse1.GetReservation();
             //Console.WriteLine(reservation1.GetDescription());

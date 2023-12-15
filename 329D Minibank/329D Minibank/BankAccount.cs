@@ -5,9 +5,15 @@ public class BankAccount
     public string Name { get; set; }
     public int Money { get; set; }
 
+
     public BankAccount(string name, int money)
     {
         Name = name;
         Money = money;
+    }
+
+    public void AddFunds(int funds)
+    {
+        Money += funds;
     }
 }

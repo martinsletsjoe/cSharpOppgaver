@@ -6,8 +6,12 @@
         {
             var bankServer = new BankServer();
 
-            var megmartin = bankServer.AddAccount("martin", 10);
-            Console.WriteLine(megmartin.Name + megmartin.Money);
+            var megmartin = bankServer.AddAccount("Lars", 10);
+
+            var hentMeg = bankServer.GetAccount("Lars");
+            hentMeg.AddFunds(200);
+            Console.WriteLine(hentMeg.Money);
+
         }
     }
 }

@@ -29,27 +29,37 @@ public class Restaurant
     public Reservation CreateReservation(string name, string phone, int partySize, DateTime dateTime)
     {
         // Check if the table is available at the specified time
-        if (IsTableAvailable(tableA, dateTime, partySize))
+        var possibleTables = new List<T>();
+        var newReservation = new Table(name, partySize);
+        foreach (var table in Tables)
         {
-            // If available, create the reservation and return success message
-            var reservation = new Reservation(name, phone, partySize, dateTime);
-            tableA.ReserveTable(reservation);
-            return new Reservation(true, reservation);
+            if (partySize <= Tables.Capacity)
+            {
+                possibleTables.Add(newReservation);
+            }
         }
-        else
+
+        foreach (var reservation in Reservations)
         {
-            // If not available, return a failure message
-            return new Reservation(false, null);
+            if (dateTime != reservation.DateTime)
+            {
+                
+            }
         }
+
+
+
+
+
     }
 
-    private bool IsTableAvailable(Table table, DateTime dateTime, int partySize)
-    {
-        // Add your logic to check if the table is available at the specified time
-        // You might want to check if the table is not reserved for that time slot
-        // and if it can accommodate the party size.
+    //private bool IsTableAvailable(Table table, DateTime dateTime, int partySize)
+    //{
+    //    // Add your logic to check if the table is available at the specified time
+    //    // You might want to check if the table is not reserved for that time slot
+    //    // and if it can accommodate the party size.
 
-        // For simplicity, let's assume the table is always available for now.
-        return true;
-    }
+    //    // For simplicity, let's assume the table is always available for now.
+    //    return true;
+    //}
 }

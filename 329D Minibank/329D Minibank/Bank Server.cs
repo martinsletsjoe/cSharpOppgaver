@@ -2,7 +2,8 @@
 
 public class BankServer
 {
-    List<BankAccount> _bankAccounts;
+
+    private List<BankAccount> _bankAccounts;
 
     public BankServer()
     {
@@ -14,5 +15,10 @@ public class BankServer
         var account = new BankAccount(name, money);
         _bankAccounts.Add(account);
         return account;
+    }
+
+    public BankAccount GetAccount(string name)
+    {
+        return _bankAccounts.SingleOrDefault(b => b.Name == name);
     }
 }
