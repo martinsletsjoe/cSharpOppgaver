@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorLåtto", "ColorLåtto\ColorLåtto.csproj", "{6DE4B396-1110-4AF6-A042-AA0A4CB04D7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DE4B396-1110-4AF6-A042-AA0A4CB04D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE4B396-1110-4AF6-A042-AA0A4CB04D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE4B396-1110-4AF6-A042-AA0A4CB04D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE4B396-1110-4AF6-A042-AA0A4CB04D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A678F13C-A23E-47D4-BF03-F1D976C8BD75}
+	EndGlobalSection
+EndGlobal
