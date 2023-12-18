@@ -32,6 +32,7 @@
         public void Show(int x, int y)
         {
             Console.BackgroundColor = _isOpen ? _color : ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(x, y);
 
             if (_number < 10) { Console.Write("0" + _number); }

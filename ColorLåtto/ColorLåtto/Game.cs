@@ -19,7 +19,11 @@
                 int row = index / 4;
                 int col = index % 4;
 
-                _cards[index] = new Card(index, ConsoleColor.Blue);
+                if (_cards[index] == null)
+                {
+                    _cards[index] = new Card(index, ConsoleColor.Blue);
+                
+                }
                 _cards[index].Show(col * 3, row * 2);
             }
         }

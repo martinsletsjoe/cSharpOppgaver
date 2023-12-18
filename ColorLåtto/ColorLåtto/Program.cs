@@ -17,7 +17,8 @@
                 game.drawBoard();
 
                 game.OpenCard(1);
-                Console.ReadLine();
+                //game.drawBoard();
+                //Console.ReadLine();
             }
 
 
