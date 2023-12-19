@@ -1,9 +1,8 @@
-﻿namespace ColorLåtto
-
+﻿namespace ColorLotto
 {
     internal class Card
     {
-        private bool _isOpen;
+        public bool _isOpen;
         private ConsoleColor _color;
         private readonly int _number;
 
@@ -11,6 +10,7 @@
         {
             _color = color;
             _number = number;
+
 
 
         }
@@ -31,8 +31,8 @@
 
         public void Show(int x, int y)
         {
-            Console.BackgroundColor = _isOpen ? _color : ConsoleColor.Magenta;
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = _isOpen ? _color : ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.SetCursorPosition(x, y);
 
             if (_number < 10) { Console.Write("0" + _number); }
