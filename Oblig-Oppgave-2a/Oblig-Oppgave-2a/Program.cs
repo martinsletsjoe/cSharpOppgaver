@@ -4,7 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var students = new List<Student>()
+            {
+                new Student("Martin"),
+            };
+            //var AState = "LevertDokumentasjon";
+            //students[0].NextStatus(AState);
+            //Console.WriteLine(students[0].CurrentStatus.state);
+
         }
     }
+
 }
