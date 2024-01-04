@@ -21,9 +21,6 @@ public class Game
 
     public Game(int windowWidth = 80)
     {
-        _levelCount = 0;
-        _roundCount = 45;
-
         WindowWidth = windowWidth;
         _particles = new List<Particle>();
 
@@ -33,13 +30,14 @@ public class Game
         _isGameOver = false;
         _level = 1;
         _score = 0;
-        _gameRoundsBetweenSpawn = _gameRoundsBetweenSpawn;
 
         _random = new Random();
     }
 
-    public void doShit()
+    public void GameLoop()
     {
+        _levelCount = 0;
+        _roundCount = 45;
         while (!CheckLostParticle())
         {
             DrawGame();
@@ -66,7 +64,7 @@ public class Game
     public void InitializeGame()
     {
         var centerX = Console.WindowWidth / 2;
-        paddle.Position = centerX - (centerX % _paddleMoveDistance);
+        paddle.ChangePosition(centerX - (centerX % _paddleMoveDistance));
         _particles.Clear();
         _isGameOver = false;
         _score = 0;
@@ -108,7 +106,7 @@ public class Game
             if (moveLeft || moveRight)
             {
                 var direction = moveLeft ? -1 : 1;
-                paddle.Position += direction * 3 * paddle.Form.Length / 4;
+                paddle.ChangePosition(paddle.Position + direction * 3 * paddle.Form.Length / 4); 
             }
         }
     }
@@ -118,7 +116,7 @@ public class Game
         for (int index = _particles.Count - 1; index >= 0; index--)
         {
             var particle = _particles[index];
-            particle.Y += 0.5f;
+            particle.ChangeParticle(particle.X, particle.Y + 0.5f);
             if (particle.Y > Console.WindowHeight - 1)
             {
                 _score++;
@@ -142,11 +140,8 @@ public class Game
 
     private void SpawnParticles()
     {
-        var newParticle = new Particle
-        {
-            X = _random.Next(0, Console.WindowWidth),
-            Y = 0
-        };
+        var newParticle = new Particle();
+        newParticle.ChangeParticle(_random.Next(0, Console.WindowWidth), 0);
         _particles.Add(newParticle);
     }
 }

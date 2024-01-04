@@ -16,7 +16,7 @@
             {
                 game.InitializeGame();
 
-                game.doShit();
+                game.GameLoop();
 
                 var text = "Game Over! Press ENTER to restart";
                 Console.SetCursorPosition(40 - text.Length / 2, 5);
