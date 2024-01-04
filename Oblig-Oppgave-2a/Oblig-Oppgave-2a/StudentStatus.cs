@@ -2,15 +2,39 @@
 
 public class StudentStatus
 {
-    public State state { get; private set; }
-
+    public Status Status { get; private set; }
+    public List<Status> StatusHistory { get; } = new List<Status>();
+    
     public StudentStatus()
     {
-        state = State.HarSøkt;
+        Status = Status.HarSøkt;
+        StatusHistory.Add(Status);
     }
 
-    public void ChangeStatus(State newStatus)
+    public void ChangeStatus(Status newStatus)
     {
-        state = newStatus;
+        if (IsStatusChangeLegal(newStatus))
+        {
+            Status = newStatus;
+            StatusHistory.Add(newStatus);
+        }
+    }
+
+    private bool IsStatusChangeLegal(Status newStatus)
+    {
+        var fieldInfo = Status.GetType().GetField(Status.ToString());
+        var attributes = Attribute.GetCustomAttributes(fieldInfo);
+
+        foreach (var attribute in attributes)
+        {
+            if (attribute is LegalStatusChangesAttribute legalStatusChangesAttribute)
+            {
+                if (legalStatusChangesAttribute.AllowedStates.Contains(newStatus))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

@@ -7,12 +7,28 @@
             var students = new List<Student>()
             {
                 new Student("Martin"),
+                new Student("Lars"),
             };
-            //var AState = "LevertDokumentasjon";
-            //students[0].NextStatus(AState);
-            //Console.WriteLine(students[0].CurrentStatus.state);
+            var martin = students[0];
+            
 
+            Console.WriteLine(martin.GetStatus());
+            martin.ChangeStatus(Status.LevertDokumentasjon);
+            martin.ChangeStatus(Status.FåttTilbud);
+            martin.ChangeStatus(Status.SignertKontrakt);
+            Console.WriteLine(martin.GetStatus());
+
+            if (martin.CheckHistory(Status.FåttTilbud))
+            {
+                Console.WriteLine("hei");
+            }
+
+            //martin.ChangeStatus(Status.IkkeStartet);
+            //Console.WriteLine(martin.GetStatus());
+            //martin.ChangeStatus(Status.SignertKontrakt);
+            //Console.WriteLine(martin.GetStatus());
         }
+
     }
 
 }

@@ -1,20 +1,31 @@
 ﻿namespace Oblig_Oppgave_2a;
 
-public enum State
+public enum Status
 {
+    [LegalStatusChanges(LevertDokumentasjon, IkkeStartet)]
     HarSøkt,
+
+    [LegalStatusChanges(FåttTilbud, IkkeStartet)]
     LevertDokumentasjon,
+
+    [LegalStatusChanges(SignertKontrakt, IkkeStartet)]
     FåttTilbud,
+
+    [LegalStatusChanges(Startet, IkkeStartet)]
     SignertKontrakt,
 
-
     IkkeStartet,
+
+    [LegalStatusChanges(Brutt, FullførtIkkeBestått, FullførtOgBestått)]
     Startet,
 
     Brutt,
+
+    [LegalStatusChanges(IkkeBeståttIkkeFlereForsøk, FullførtOgBestått)]
     FullførtIkkeBestått,
 
     IkkeBeståttIkkeFlereForsøk,
+
     FullførtOgBestått,
 }
 
