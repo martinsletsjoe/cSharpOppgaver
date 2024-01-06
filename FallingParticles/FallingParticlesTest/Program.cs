@@ -4,13 +4,9 @@
     {
         static void Main(string[] args)
         {
-
-
             var game = new Game();
             Console.CursorVisible = false;
             Console.WindowWidth = game.WindowWidth;
-
-
 
             while (true)
             {
@@ -22,7 +18,6 @@
                 Console.SetCursorPosition(40 - text.Length / 2, 5);
                 Console.WriteLine(text);
                 Console.ReadLine();
-
             }
         }
     }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emne3Obligatorisk", "Emne3Obligatorisk\Emne3Obligatorisk.csproj", "{2EF698EE-AE0C-492A-B14A-424257EB50F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FallingParticles", "FallingParticlesTest\FallingParticles.csproj", "{D14729EB-3CD3-4AC9-996F-3910D8651F13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2EF698EE-AE0C-492A-B14A-424257EB50F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2EF698EE-AE0C-492A-B14A-424257EB50F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2EF698EE-AE0C-492A-B14A-424257EB50F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2EF698EE-AE0C-492A-B14A-424257EB50F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D14729EB-3CD3-4AC9-996F-3910D8651F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D14729EB-3CD3-4AC9-996F-3910D8651F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D14729EB-3CD3-4AC9-996F-3910D8651F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D14729EB-3CD3-4AC9-996F-3910D8651F13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {211C3235-CBF1-4191-90A1-1F031846EBB7}
+		SolutionGuid = {6FC56EE6-6EA2-4DBC-B62A-957FC60C861F}
 	EndGlobalSection
 EndGlobal

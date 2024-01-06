@@ -15,7 +15,7 @@
             Console.WriteLine(martin.GetStatus());
 
             // lovlig status bytte
-            martin.ChangeStatus(Status.IkkeStartet);
+            martin.ChangeStatus(Status.LevertDokumentasjon);
             Console.WriteLine(martin.GetStatus());
 
             // ulovlig status bytte, ingen forandring skal skje

@@ -6,8 +6,6 @@ public class StudentStatus
     private readonly Dictionary<Status, List<Status>> _allowedTransitions;
     public List<Status> StatusHistory { get; } = new List<Status>();
 
-
-
     public StudentStatus()
     {
         Status = Status.HarSøkt;
@@ -38,7 +36,4 @@ public class StudentStatus
         }
         return false;
     }
-
-
-    
 }

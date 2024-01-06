@@ -2,8 +2,8 @@
 
 public class Student
 {
-    public string Name { get; set;}
-    public StudentStatus CurrentStatus { get; private set; }
+    public string Name { get;}
+    public StudentStatus CurrentStatus { get; }
 
     public Student(string name)
     {
