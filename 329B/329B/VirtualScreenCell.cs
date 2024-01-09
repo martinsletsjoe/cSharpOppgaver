@@ -16,6 +16,7 @@ public class VirtualScreenCell
         if (Up && Down && Right) {return '\u251c'; }
 
         if (Up && Down && Left) { return '\u2524'; }
+        if (Up && Down ) { }
 
         return ' ';
     }
